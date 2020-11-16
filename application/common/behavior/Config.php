@@ -83,7 +83,7 @@ class Config
 
             if (!in_array($module, config('module.default_controller_layer'))) {
                 // 修改默认访问控制器层
-                config('url_controller_layer', 'admin');
+                config('app.url_controller_layer', 'admin');
                 // 修改视图模板路径
                 config('template.view_path', Env::get('app_path'). $module. '/view/admin/');
             }
@@ -97,7 +97,7 @@ class Config
 
             if ($module != '' && !in_array($module, config('module.default_controller_layer'))) {
                 // 修改默认访问控制器层
-                config('url_controller_layer', 'home');
+                config('app.url_controller_layer', 'home');
             }
         }
 
